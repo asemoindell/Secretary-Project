@@ -1,0 +1,28 @@
+admin-dashboard/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── uploads/
+├── includes/
+│   ├── db.php
+│   ├── header.php
+│   └── footer.php
+├── auth/
+│   ├── login.php
+│   └── logout.php
+├── dashboard.php
+├── users/
+│   ├── index.php
+│   ├── create.php
+│   ├── edit.php
+│   └── delete.php
+├── products/
+│   ├── index.php
+│   ├── create.php
+│   ├── edit.php
+│   └── delete.php
+└── daily_reports/
+    ├── index.php
+    ├── create.php
+    ├── edit.php
+    └── delete.php

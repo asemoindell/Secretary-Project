@@ -1,0 +1,42 @@
+CREATE TABLE reports (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  reference_id VARCHAR(32),
+  user_id INT NULL,
+  full_name VARCHAR(255) NOT NULL,
+  edl_registration_number VARCHAR(100),
+  properties VARCHAR(255),
+  phone VARCHAR(50),
+  address VARCHAR(255),
+  land_size VARCHAR(100),
+  passport_upload VARCHAR(255),
+  community VARCHAR(100),
+  status VARCHAR(100),
+  document_collected VARCHAR(100),
+  pause_reason TEXT,
+  other TEXT,
+  title VARCHAR(255),
+  content TEXT,
+  documents TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  reference_id VARCHAR(32),
+  type VARCHAR(100),
+  surname VARCHAR(100),
+  firstname VARCHAR(100),
+  middlename VARCHAR(100),
+  local_govt VARCHAR(100),
+  country VARCHAR(100),
+  fullname VARCHAR(255) NOT NULL,
+  username VARCHAR(100) NULL UNIQUE,
+  password VARCHAR(255) NULL,
+  profile_picture VARCHAR(255),
+  role VARCHAR(50) DEFAULT 'user',
+  document_file TEXT,
+  permissions TEXT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+);

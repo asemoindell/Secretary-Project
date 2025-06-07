@@ -1,0 +1,80 @@
+/* Bootstrap is already included via CDN. Add your custom styles here. */
+body { background: #f8f9fa; }
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 28px 24px 28px;
+}
+@media (max-width: 500px) {
+    .login-container {
+        max-width: 98vw;
+        padding: 18px 8px 12px 8px;
+        margin: 20px auto;
+    }
+    .login-container h2, .login-container h3 {
+        font-size: 1.5rem;
+    }
+    .card-body.p-4 {
+        padding: 1.5rem !important;
+    }
+}
+.login-container h2, .login-container h3 {
+    margin-bottom: 24px;
+    color: #007bff;
+}
+.card {
+    border-radius: 12px;
+}
+/* Sidebar responsiveness */
+@media (max-width: 768px) {
+  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 {
+    position: static !important;
+    width: 100% !important;
+    min-height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    flex-direction: row !important;
+    padding: 0.5rem 0.5rem !important;
+    z-index: 1030;
+  }
+  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 ul.nav {
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 ul.nav li {
+    margin-bottom: 0 !important;
+  }
+  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 .fs-4 {
+    display: none;
+  }
+  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 img {
+    margin-right: 0 !important;
+  }
+}
+
+.container[style*="margin-left:220px"] {
+  transition: margin 0.3s;
+}
+@media (max-width: 768px) {
+  .container[style*="margin-left:220px"] {
+    margin-left: 0 !important;
+  }
+}
+
+/* Sidebar custom color and hover */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 {
+    background: #1a237e !important;
+}
+.sidebar-hover:hover, .sidebar-hover:focus {
+    background: #3949ab !important;
+    color: #fff !important;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.nav-link.text-white.sidebar-hover {
+    color: #fff !important;
+}
