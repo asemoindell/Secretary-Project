@@ -90,7 +90,7 @@ if ($user_role === 'secretary') {
 <div class="d-flex flex-column flex-shrink-0 p-3 border-end min-vh-100 side-nav-custom"
      style="width: 220px; position: fixed; top: 0; left: 0; z-index: 1030; overflow-y: auto; max-height: 100vh;">
     <a href="/dashboard.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-        <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard/assets/img/brand/blue.png" alt="Logo" width="40" class="me-2">
+   <!--     <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard/assets/img/brand/blue.png" alt="Logo" width="40" class="me-2">-->
         <span class="fs-4 fw-bold text-primary">Dashboard</span>
     </a>
     <hr>

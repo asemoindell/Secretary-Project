@@ -1,5 +1,8 @@
 /* Bootstrap is already included via CDN. Add your custom styles here. */
-body { background: #f8f9fa; }
+body { 
+    background: #f8f9fa; 
+}
+
 .login-container {
     max-width: 400px;
     margin: 60px auto;
@@ -8,52 +11,210 @@ body { background: #f8f9fa; }
     box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     padding: 32px 28px 24px 28px;
 }
-@media (max-width: 500px) {
-    .login-container {
-        max-width: 98vw;
-        padding: 18px 8px 12px 8px;
-        margin: 20px auto;
-    }
-    .login-container h2, .login-container h3 {
-        font-size: 1.5rem;
-    }
-    .card-body.p-4 {
-        padding: 1.5rem !important;
-    }
-}
+
 .login-container h2, .login-container h3 {
     margin-bottom: 24px;
     color: #007bff;
 }
+
 .card {
     border-radius: 12px;
 }
-/* Sidebar responsiveness */
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 {
-    position: static !important;
-    width: 100% !important;
-    min-height: auto !important;
-    border-right: none !important;
-    border-bottom: 1px solid #dee2e6 !important;
-    flex-direction: row !important;
-    padding: 0.5rem 0.5rem !important;
-    z-index: 1030;
-  }
-  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 ul.nav {
-    flex-direction: row !important;
-    width: 100%;
-    justify-content: space-around;
-  }
-  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 ul.nav li {
-    margin-bottom: 0 !important;
-  }
-  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 .fs-4 {
-    display: none;
-  }
-  .d-flex.flex-column.flex-shrink-0.p-3.bg-white.border-end.min-vh-100 img {
-    margin-right: 0 !important;
-  }
+    .login-container {
+        max-width: 95vw;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    
+    .login-container h2, .login-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card-body.p-4 {
+        padding: 1.5rem !important;
+    }
+    
+    /* Table responsive */
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+    
+    /* Button groups responsive */
+    .btn-group {
+        display: block;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    
+    /* Dashboard cards responsive */
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Form controls responsive */
+    .form-control, .form-select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* CMS Layout responsive */
+    .cms-sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        transition: all 0.3s ease;
+        z-index: 1050;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    
+    .cms-sidebar.show {
+        left: 0;
+    }
+    
+    .cms-sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1049;
+        display: none;
+    }
+    
+    .cms-sidebar-overlay.show {
+        display: block;
+    }
+    
+    /* Hide desktop sidebar on mobile */
+    .col-md-3.col-lg-2 {
+        display: none !important;
+    }
+    
+    /* Adjust main content for mobile */
+    .col-md-9.col-lg-10 {
+        width: 100% !important;
+        padding-bottom: 20px;
+    }
+    
+    /* Mobile header adjustments */
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .d-flex.justify-content-between.align-items-center > div {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .d-flex.justify-content-between.align-items-center > div:first-child {
+        margin-top: 0;
+    }
+    
+    /* Mobile buttons */
+    .btn {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Stats cards on mobile */
+    .col-md-3 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Form responsive */
+    .form-floating {
+        margin-bottom: 1rem;
+    }
+    
+    /* Modal responsive */
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    /* Improve button spacing on mobile */
+    .btn-group-vertical .btn {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Mobile-friendly navigation */
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    /* Improve card spacing */
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Better mobile tables */
+    .table-responsive table {
+        font-size: 0.875rem;
+    }
+    
+    /* Mobile-friendly alerts */
+    .alert {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+    
+    /* Improve mobile form experience */
+    .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    
+    /* Mobile-optimized modals */
+    .modal-dialog {
+        max-width: 95vw;
+        margin: 1rem auto;
+    }
+    
+    /* Touch-friendly buttons */
+    .btn {
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Responsive images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+    }
+    
+    .card:hover {
+        transform: none;
+    }
+    
+    /* Larger touch targets */
+    .nav-link,
+    .btn,
+    .form-control {
+        min-height: 44px;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 .container[style*="margin-left:220px"] {

@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $admin = $stmt->fetch();
     if ($admin && password_verify($password, $admin['password'])) {
         $_SESSION['admin_id'] = $admin['id'];
+        $_SESSION['admin_logged_in'] = true;
         header("Location: ../dashboard.php");
         exit();
     }
@@ -46,22 +47,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="card shadow-lg border-0 w-100" style="max-width: 400px;">
         <div class="card-body p-4">
             <div class="text-center mb-4">
-                <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard/assets/img/brand/blue.png" alt="Logo" width="60" class="mb-2">
+              <!--  <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard/assets/img/brand/blue.png" alt="Logo" width="60" class="mb-2">-->
                 <h3 class="mb-0 fw-bold text-primary">Login</h3>
             </div>
             <?php if (isset($error)): ?>
                 <div class="alert alert-danger text-center py-2 mb-3"><?= $error; ?></div>
             <?php endif; ?>
             <form method="POST">
-                <div class="mb-3">
-                    <label class="form-label">Username</label>
-                    <input type="text" name="username" class="form-control" required>
+                <div class="form-floating mb-3">
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
+                    <label for="username">Username</label>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" required>
+                <div class="form-floating mb-3">
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
                 </div>
-                <button class="btn btn-primary w-100">Login</button>
+                <button class="btn btn-primary w-100 py-2">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </button>
             </form>
         </div>
     </div>
